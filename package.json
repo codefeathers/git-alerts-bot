@@ -1,0 +1,27 @@
+{
+  "name": "git-alerts-bot",
+  "version": "1.0.0",
+  "description": "TG Bot for Gitlab/Github",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/ceda_ei/git-alerts-bot.git"
+  },
+  "author": "ceda_ei",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://gitlab.com/ceda_ei/git-alerts-bot/issues"
+  },
+  "homepage": "https://gitlab.com/ceda_ei/git-alerts-bot#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "telegraf": "^3.25.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-google": "^0.11.0"
+  }
+}
