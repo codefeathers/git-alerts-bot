@@ -18,6 +18,8 @@
   "homepage": "https://gitlab.com/ceda_ei/git-alerts-bot#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "sequelize": "^4.41.2",
+    "sqlite3": "^4.0.4",
     "telegraf": "^3.25.0"
   },
   "devDependencies": {
