@@ -1,8 +1,8 @@
-const Sequelize = require("sequelize");
-const config = require("../config");
+module.exports = (Sequelize, config) => {
 
-const { database, username, password, options } = config.sequelize;
-const sequelize = new Sequelize(database, username, password, options);
-const models = require("../models")(sequelize);
+	const { database, username, password, options } = config.sequelize;
+	const sequelize = new Sequelize(database, username, password, options);
+	const models = require("../models")(sequelize);
+	return sequelize.sync().then(() => models);
 
-module.exports = sequelize.sync().then(() => models);
+};

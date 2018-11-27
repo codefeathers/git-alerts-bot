@@ -1,3 +1,3 @@
 module.exports = sequelize => ({
-    integrations: require("./integrations")(sequelize),
+	integrations: require("./integrations")(sequelize),
 });
