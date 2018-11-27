@@ -1,12 +1,19 @@
 const express = require("express");
-const app = express();
-app.use(express.json());
+const main = require("./server/index");
 const convert = require("./util/convert");
+const { server: config } = require("./config");
+const PORT = config.server.port;
 
-app.get("/webhook/:provider", (req) => {
+const app = express();
 
-	const strategy = req.params.provider;
-	const eventType = convert.getEvent[strategy](req.body);
+app.use(express.json());
+app.use((req, res, next) => {
+
+	req.convert = convert;
+	next();
 
 });
-app.listen(2000, () => console.log("Listening on port 2000"));
+
+main(app);
+
+app.listen(PORT, () => console.log("Listening on port", PORT));
